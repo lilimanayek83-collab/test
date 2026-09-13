@@ -1,0 +1,7 @@
+pyrogram
+TgCrypto
+motor
+pymongo
+python-dotenv
+Pillow
+libtorrent
