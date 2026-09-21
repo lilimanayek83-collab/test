@@ -112,6 +112,7 @@ app = Client(
     bot_token=Config.BOT_TOKEN,
     workers=10,
     sleep_threshold=10,
+     workdir=os.getenv("SESSION_DIR", "."),   # <-- added
     # NOT in_memory: private channels can only be reached by numeric chat_id once Pyrogram has
     # resolved their "peer" at least once. in_memory=True throws that cache away on every
     # restart, which causes CHANNEL_INVALID for any private channel the bot hasn't freshly
