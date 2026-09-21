@@ -1,0 +1,14 @@
+services:
+  bot:
+    build: .
+    container_name: batch-autorename-bot
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - SESSION_DIR=/app/data
+    volumes:
+      - ./data:/app/data            # session file (keeps private-channel peer cache)
+      - ./downloads:/app/downloads  # torrent/encode scratch space
+    ports:
+      - "6881:6881"                 # libtorrent listen port
+      - "6881:6881/udp"
