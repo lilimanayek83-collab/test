@@ -5,3 +5,4 @@ pymongo
 python-dotenv
 Pillow
 libtorrent
+ffmpeg
