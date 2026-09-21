@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1 \
     SESSION_DIR=/app/data
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends ffmpeg aria2 gcc libc6-dev \
+ && apt-get install -y --no-install-recommends ffmpeg aria2 libtorrent gcc libc6-dev \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
